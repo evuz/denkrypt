@@ -4,11 +4,13 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "serve": "servor src --reload"
+    "start": "vite serve src",
+    "build": "vite build src --outDir dist"
   },
   "devDependencies": {
     "servor": "^4.0.2",
-    "standard": "^14.3.4"
+    "standard": "^14.3.4",
+    "vite": "^0.16.4"
   },
   "eslintConfig": {
     "extends": "standard"
