@@ -1,0 +1,30 @@
+.Input {
+  width: 100%;
+  border: none;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  color: var(--geist-foreground);
+  font-family: var(--font-family);
+}
+
+.Input::selection {
+  background: var(--geist-cyan);
+}
+
+.Input__wrapper {
+  margin: 0.25rem 0.875rem;
+  width: 100%;
+}
+
+.Input__container {
+  display: inline-flex;
+  border-radius: 5px;
+  border: 1px solid var(--accents-2);
+  transition: border .3s ease 0s;
+}
+
+.Input__container--focused {
+  display: inline-flex;
+  border-radius: 5px;
+  border-color: var(--geist-foreground);
+}
