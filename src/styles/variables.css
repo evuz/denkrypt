@@ -1,0 +1,21 @@
+:root {
+  --geist-background: #fff;
+  --accents-1: #fafafa;
+  --accents-2: #eaeaea;
+  --accents-3: #999;
+  --accents-4: #888;
+  --accents-5: #666;
+  --accents-6: #444;
+  --accents-7: #333;
+  --accents-8: #111;
+  --geist-foreground: #000;
+  --geist-error-light: #ff1a1a;
+  --geist-error: #e00;
+  --geist-error-dark: #c00;
+  --geist-success-light: #3291ff;
+  --geist-success: #0070f3;
+  --geist-success-dark: #0366d6;
+  --geist-warning-light: #f7b955;
+  --geist-warning: #f5a623;
+  --geist-warning-dark: #f49b0b;
+}
