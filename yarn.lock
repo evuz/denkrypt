@@ -37,6 +37,11 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
+"@evuz/joltik@^0.1.0":
+  version "0.1.0"
+  resolved "https://npm.pkg.github.com/download/@evuz/joltik/0.1.0/42efbe459440a115c7c47b9fd9ad8bb06fdbe18a8f644696344a5a3f1b0db687#b514bcdbd47afdbc96b5ef72ce5cf73664b713c0"
+  integrity sha512-KIhBynv2UckYdd5Ga2JfvA3eD1IkkJE4v1dM/1AX3AMPOy4jHsawpcQmFk55FrNtCRhpi88Cu3nyLeOzCXk6Rg==
+
 "@rollup/plugin-commonjs@~11.0.0":
   version "11.0.2"
   resolved "https://registry.yarnpkg.com/@rollup/plugin-commonjs/-/plugin-commonjs-11.0.2.tgz#837cc6950752327cb90177b608f0928a4e60b582"

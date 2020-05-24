@@ -4,18 +4,15 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "vite serve src",
-    "build": "vite build src --outDir dist"
+    "start": "vite serve src --jsx-factory=j",
+    "build": "vite build src --jsx-factory=j --outDir dist"
   },
   "devDependencies": {
     "servor": "^4.0.2",
     "standard": "^14.3.4",
     "vite": "^0.16.4"
   },
-  "eslintConfig": {
-    "extends": "standard",
-    "env": {
-      "browser": true
-    }
+  "dependencies": {
+    "@evuz/joltik": "^0.1.0"
   }
 }
