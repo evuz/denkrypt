@@ -1,8 +1,8 @@
 import { crypto } from './crypto.js'
 import { getSecretKey } from './secretKey.js'
 
-export async function derivedEncryptionSecretKey (salt) {
-  const secretKey = await getSecretKey()
+export async function derivedEncryptionSecretKey (secretKey, salt) {
+  secretKey = await getSecretKey(secretKey)
   return crypto.subtle.deriveKey(
     {
       salt,

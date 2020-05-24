@@ -1,7 +1,7 @@
 import { str2ab } from './arraybuffer.js'
 
-export function getSecretKey () {
-  const secretKey = str2ab('the_key')
+export function getSecretKey (secretKey) {
+  secretKey = str2ab(secretKey)
   return window.crypto.subtle.importKey(
     'raw', // raw
     secretKey, // array buffer password
