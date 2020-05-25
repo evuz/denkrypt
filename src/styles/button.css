@@ -1,6 +1,5 @@
 .Button {
   height: 2.5rem;
-  min-width: 12.5rem;
   color: var(--geist-background);
   background-color: var(--geist-foreground);
   border: 1px solid var(--geist-foreground);

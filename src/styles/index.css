@@ -17,3 +17,9 @@ body {
   min-height: 100vh;
   margin: 0;
 }
+
+#buttons {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+}
