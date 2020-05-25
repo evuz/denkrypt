@@ -3,6 +3,6 @@
   padding: 0 1rem;
   max-width: 720px;
   display: grid;
-  grid-template-columns: auto;
+  grid-template-columns: 100%;
   gap: 1rem;
 }
