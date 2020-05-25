@@ -3,7 +3,7 @@ import { j } from '@evuz/joltik'
 import { filterClassNames } from '../helpers/filterClassNames'
 import { useFocus } from '../hooks/useFocus'
 
-export function Input ({ onChange, placeholder, type = 'text' }) {
+export function Input ({ onChange, placeholder, type = 'text', area = false }) {
   const [isFocused, bind] = useFocus()
   const containerClassNames = filterClassNames({
     Input__container: true,
@@ -20,7 +20,7 @@ export function Input ({ onChange, placeholder, type = 'text' }) {
   return (
     <div className={containerClassNames}>
       <div className='Input__wrapper'>
-        <input type={type} onInput={handleChange} placeholder={placeholder} {...bind} className='Input' />
+        {area ? <textarea type={type} onInput={handleChange} placeholder={placeholder} {...bind} className='Input' /> : <input type={type} onInput={handleChange} placeholder={placeholder} {...bind} className='Input' />}
       </div>
     </div>
   )

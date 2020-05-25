@@ -7,6 +7,11 @@
   font-family: var(--font-family);
 }
 
+textarea.Input {
+  height: 100px;
+  resize: none;
+}
+
 .Input::selection {
   background: var(--geist-cyan);
 }
@@ -17,6 +22,7 @@
 }
 
 .Input__container {
+  width: 100%;
   display: inline-flex;
   border-radius: 5px;
   border: 1px solid var(--accents-2);
