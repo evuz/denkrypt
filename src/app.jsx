@@ -5,6 +5,7 @@ import { decrypt } from './helpers/decrypt.js'
 import { encrypt } from './helpers/encrypt.js'
 import { Button } from './components/Button'
 import { Input } from './components/Input'
+import { Progress } from './components/Progress'
 
 import './styles'
 
@@ -15,6 +16,8 @@ render(<Button onClick={handleEncrypt}>Encrypt!</Button>, document.getElementByI
 render(<Button secondary onClick={handleDecrypt}>Decrypt!</Button>, document.getElementById('buttons'))
 render(<Input placeholder='Insert text' onChange={saveInput('content')}>Decrypt!</Input>, document.getElementById('input'))
 render(<Input placeholder='Secret key' onChange={saveInput('secret')} type='password'>Decrypt!</Input>, document.getElementById('secret'))
+
+render(<Progress color='warning' />, document.getElementById('progress'))
 
 function saveInput (key) {
   return function (value) {
