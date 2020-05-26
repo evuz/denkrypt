@@ -1,0 +1,32 @@
+.Progress {
+  width: 100%;
+  height: 0.625rem;
+}
+
+progress[value].Progress {
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 5px;
+}
+
+progress[value].Progress::-webkit-progress-bar {
+  background-color: var(--accents-2);
+  border-radius: 5px;
+}
+
+progress[value].Progress::-webkit-progress-value {
+  background-color: var(--geist-foreground);
+  border-radius: 5px;
+}
+
+progress[value].Progress--error::-webkit-progress-value {
+  background-color: var(--geist-error);
+}
+
+progress[value].Progress--warning::-webkit-progress-value {
+  background-color: var(--geist-warning);
+}
+
+progress[value].Progress--success::-webkit-progress-value {
+  background-color: var(--geist-success);
+}
