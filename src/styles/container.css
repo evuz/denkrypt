@@ -1,6 +1,6 @@
 .Container {
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 1rem;
   max-width: 720px;
   display: grid;
   grid-template-columns: 100%;
