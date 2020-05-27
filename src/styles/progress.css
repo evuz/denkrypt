@@ -30,3 +30,7 @@ progress[value].Progress--warning::-webkit-progress-value {
 progress[value].Progress--success::-webkit-progress-value {
   background-color: var(--geist-success);
 }
+
+progress[value].Progress--secondary::-webkit-progress-value {
+  background-color: var(--accents-5);
+}
