@@ -1,8 +1,0 @@
-.Container {
-  margin: 0 auto;
-  padding: 1rem;
-  max-width: 720px;
-  display: grid;
-  grid-template-columns: 100%;
-  gap: 1rem;
-}

@@ -1,17 +1,17 @@
 {
   "name": "denkrypt",
   "version": "1.0.1",
-  "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "vite serve src --jsx-factory=j",
-    "build": "vite build src --jsx-factory=j --outDir dist"
-  },
-  "devDependencies": {
-    "standard": "^14.3.4",
-    "vite": "^0.16.4"
+    "start": "wmr",
+    "build": "wmr build --prerender",
+    "serve": "wmr serve"
   },
   "dependencies": {
-    "@evuz/joltik": "^0.2.0"
+    "preact-iso": "^0.2.0"
+  },
+  "devDependencies": {
+    "standard": "^16.0.3",
+    "wmr": "^1.0.0"
   }
 }
