@@ -1,9 +1,14 @@
 import hydrate from 'preact-iso/hydrate'
 
-import Home from './pages/home/index.js'
+import { Home } from './pages/Home/Home'
+import { AppLayout } from './pages/_app'
 
 export function App () {
-  return <Home />
+  return (
+    <AppLayout>
+      <Home />
+    </AppLayout>
+  )
 }
 
 hydrate(<App />)

@@ -1,19 +1,69 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oxygen+Mono&display=swap");
 
 :root {
+  --background: #fff;
+  --accents-1: #fafafa;
+  --accents-2: #eaeaea;
+  --accents-3: #999;
+  --accents-4: #888;
+  --accents-5: #666;
+  --accents-6: #444;
+  --accents-7: #333;
+  --accents-8: #111;
+  --foreground: #000;
+  --cyan: #79ffe1;
+  /* Error */
+  --error-light: #ff1a1a;
+  --error: #e00;
+  --error-dark: #c00;
+  /* Success */
+  --success-light: #3291ff;
+  --success: #0070f3;
+  --success-dark: #0366d6;
+  /* Warning */
+  --warning-light: #f7b955;
+  --warning: #f5a623;
+  --warning-dark: #f49b0b;
+
   /* Fonts */
   --font-family: "Inter", sans-serif;
+  --font-mono: "Oxygen Mono", monospace;
 }
 
 html {
-  font-family: var(--font-family);
   font-size: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  font-family: var(--font-family);
 }
 
 body {
+  min-width: 100vw;
+  min-height: 100vh;
   margin: 0;
+  background-color: var(--background);
+  color: var(--foreground);
 }
 
 * {
   box-sizing: border-box;
+}
+
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
 }
