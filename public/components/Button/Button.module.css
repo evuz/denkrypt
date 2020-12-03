@@ -1,0 +1,27 @@
+.Button {
+  height: 2.5rem;
+  color: var(--background);
+  background-color: var(--foreground);
+  border: 1px solid var(--foreground);
+  padding: 0 2rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: 5px;
+  transition: all 0.3s ease 0s;
+}
+
+.is-secondary {
+  color: var(--accents-5);
+  background-color: var(--background);
+  border: 1px solid var(--accents-2);
+}
+
+.Button:hover {
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+.is-secondary:hover {
+  color: var(--foreground);
+  border: 1px solid var(--foreground);
+}
