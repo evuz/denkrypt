@@ -1,0 +1,14 @@
+.Header {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo {
+  height: 5rem;
+}
+
+.title {
+  margin: 0;
+}
