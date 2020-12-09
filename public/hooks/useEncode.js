@@ -14,7 +14,6 @@ export function useEncode () {
   }, [])
 
   const dec = useCallback((code, secret) => {
-    console.log({ code, secret })
     decrypt(decoded(code), secret).then((v) => {
       setText(v)
     }).catch(err => console.log(err))

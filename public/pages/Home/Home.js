@@ -4,6 +4,7 @@ import { Button } from '../../components/Button/Button'
 import { Header } from '../../components/Header/Header'
 import { Input } from '../../components/Input/Input'
 import { Progress } from '../../components/Progress/Progress'
+import { Snippet } from '../../components/Snippet/Snippet'
 import { useEncode } from '../../hooks/useEncode'
 
 import { passwordScore } from '../../utils/passwordScore'
@@ -21,10 +22,6 @@ export function Home () {
     const scorePercent = (100 / 6) * score
     setProgress({ percent: scorePercent })
   }, [secret])
-
-  useEffect(() => {
-    console.log(text)
-  }, [text])
 
   return (
     <section className={styles.container}>
@@ -55,6 +52,7 @@ export function Home () {
           Decrypt!
         </Button>
       </div>
+      {text ? <Snippet text={text} /> : null}
     </section>
   )
 }
