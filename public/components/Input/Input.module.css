@@ -7,6 +7,10 @@
     color: var(--foreground);
     font-family: var(--font-family);
   }
+
+  .label {
+    font-size: 0;
+  }
   
   textarea.Input {
     height: 100px;

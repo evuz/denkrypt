@@ -6,6 +6,8 @@ import styles from './Input.module.css'
 export function Input ({
   onChange,
   placeholder,
+  name,
+  label,
   value = '',
   type = 'text',
   area = false
@@ -31,10 +33,15 @@ export function Input ({
           value={value}
           className={styles.Input}
           type={type}
+          name={name}
+          id={name}
           onInput={handleChange}
           placeholder={placeholder}
           {...bind}
         />
+        <label for={name} className={styles.label}>
+          {label || placeholder}
+        </label>
       </div>
     </div>
   )

@@ -29,11 +29,14 @@ export function Home () {
       <Input
         value={phrase}
         area
+        name='phrase'
+        label='Text to encode or decode'
         placeholder='Insert text'
         onChange={setPhrase}
       />
       <div className={styles.secret}>
         <Input
+          name='secret'
           placeholder='Secret key'
           value={secret}
           onChange={setSecret}
