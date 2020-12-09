@@ -4,6 +4,7 @@ import { Button } from '../../components/Button/Button'
 import { Header } from '../../components/Header/Header'
 import { Input } from '../../components/Input/Input'
 import { Progress } from '../../components/Progress/Progress'
+import { useEncode } from '../../hooks/useEncode'
 
 import { passwordScore } from '../../utils/passwordScore'
 
@@ -13,12 +14,17 @@ export function Home () {
   const [phrase, setPhrase] = useState('')
   const [secret, setSecret] = useState('')
   const [progress, setProgress] = useState({ percent: 0 })
+  const { text, encrypt, decrypt } = useEncode()
 
   useEffect(() => {
     const score = passwordScore(secret)
     const scorePercent = (100 / 6) * score
     setProgress({ percent: scorePercent })
   }, [secret])
+
+  useEffect(() => {
+    console.log(text)
+  }, [text])
 
   return (
     <section className={styles.container}>
@@ -44,8 +50,8 @@ export function Home () {
         />
       </div>
       <div className={styles.buttons}>
-        <Button onClick={() => {}}>Encrypt!</Button>
-        <Button secondary onClick={() => {}}>
+        <Button onClick={() => encrypt(phrase, secret)}>Encrypt!</Button>
+        <Button secondary onClick={() => decrypt(phrase, secret)}>
           Decrypt!
         </Button>
       </div>
