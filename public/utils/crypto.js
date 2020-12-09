@@ -1,1 +1,1 @@
-export const crypto = window.crypto
+export const crypto = typeof window !== 'undefined' ? window.crypto : null
