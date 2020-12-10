@@ -1,6 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Oxygen+Mono&display=swap");
-
 :root {
   --background: #fff;
   --accents-1: #fafafa;
@@ -27,8 +24,10 @@
   --warning-dark: #f49b0b;
 
   /* Fonts */
-  --font-family: "Inter", sans-serif;
-  --font-mono: "Oxygen Mono", monospace;
+  --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+  Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+  'Segoe UI Symbol';
+  --font-mono: Consolas, Menlo, Monaco, source-code-pro, monospace;
 }
 
 html {
