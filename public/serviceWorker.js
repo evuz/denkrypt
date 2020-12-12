@@ -1,4 +1,8 @@
 /* eslint-env serviceworker */
+const APP_NAME = '{{name}}'
+const VERSION = '{{version}}'
+const ASSETS = '{{assets}}'
+
 self.addEventListener('install', (event) =>
   event.waitUntil(installServiceWorker())
 )
@@ -8,7 +12,7 @@ async function installServiceWorker () {
 
   const cache = await caches.open(getCacheName())
 
-  return cache.addAll(['/'])
+  return cache.addAll(ASSETS)
 }
 
 self.addEventListener('activate', () => activateSW())
@@ -52,5 +56,5 @@ function log (message) {
 }
 
 function getCacheName () {
-  return 'Denkrypt-app'
+  return `${VERSION}-${APP_NAME}`
 }

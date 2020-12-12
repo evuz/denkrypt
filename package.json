@@ -5,12 +5,15 @@
   "scripts": {
     "start": "wmr",
     "build": "wmr build --prerender",
-    "serve": "wmr serve"
+    "postbuild": "npm run build:sw",
+    "serve": "wmr serve",
+    "build:sw": "node ./scripts/generateServiceWorker.js"
   },
   "dependencies": {
     "preact-iso": "^0.2.0"
   },
   "devDependencies": {
+    "fast-glob": "^3.2.4",
     "standard": "^16.0.3",
     "wmr": "^1.0.0"
   }

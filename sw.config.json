@@ -1,0 +1,8 @@
+{
+  "assets": [
+      "/",
+      "index.*.js",
+      "assets/logo.png",
+      "assets/style.*.css"
+  ]
+}
