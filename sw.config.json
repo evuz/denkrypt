@@ -1,6 +1,7 @@
 {
   "assets": [
       "/",
+      "index.html",
       "index.*.js",
       "assets/logo.png",
       "assets/style.*.css"
