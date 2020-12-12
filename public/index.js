@@ -2,7 +2,7 @@ import hydrate from 'preact-iso/hydrate'
 
 import { Home } from './pages/Home/Home'
 import { AppLayout } from './pages/_app'
-// import { registerServiceWorker } from './utils/sw/register'
+import { registerServiceWorker } from './utils/sw/register'
 
 export function App () {
   return (
@@ -19,4 +19,4 @@ export async function prerender (data) {
   return await prerender(<App {...data} />)
 }
 
-// registerServiceWorker()
+registerServiceWorker()
