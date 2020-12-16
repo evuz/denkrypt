@@ -23,6 +23,8 @@ export function Home () {
     setProgress({ percent: scorePercent })
   }, [secret])
 
+  const buttonsDisabled = [secret.length, phrase.length].includes(0)
+
   return (
     <section className={styles.container}>
       <Header />
@@ -50,8 +52,17 @@ export function Home () {
         />
       </div>
       <div className={styles.buttons}>
-        <Button onClick={() => encrypt(phrase, secret)}>Encrypt!</Button>
-        <Button secondary onClick={() => decrypt(phrase, secret)}>
+        <Button
+          disabled={buttonsDisabled}
+          onClick={() => encrypt(phrase, secret)}
+        >
+          Encrypt!
+        </Button>
+        <Button
+          disabled={buttonsDisabled}
+          secondary
+          onClick={() => decrypt(phrase, secret)}
+        >
           Decrypt!
         </Button>
       </div>

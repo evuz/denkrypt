@@ -27,6 +27,13 @@
   color: var(--foreground);
 }
 
+.Button:disabled {
+  pointer-events: none;
+  background-color: var(--accents-1);
+  color: var(--accents-3);
+  border-color: var(--accents-2);
+}
+
 .is-secondary:hover, .is-secondary:focus {
   color: var(--foreground);
   border: 1px solid var(--foreground);
