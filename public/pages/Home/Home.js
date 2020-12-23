@@ -10,9 +10,12 @@ import { Snippet } from '../../components/Snippet/Snippet'
 import { useEncode } from '../../hooks/useEncode'
 
 import { passwordScore } from '../../utils/passwordScore'
+import { useSearchParam } from '../../hooks/useSearchParam'
+import { ShareButton } from '../../components/ShareButton'
 
 export function Home () {
-  const [phrase, setPhrase] = useState('')
+  const params = useSearchParam()
+  const [phrase, setPhrase] = useState(params.phrase || '')
   const [secret, setSecret] = useState('')
   const [progress, setProgress] = useState({ percent: 0 })
   const { text, encrypt, decrypt } = useEncode()
@@ -60,11 +63,14 @@ export function Home () {
         </Button>
         <Button
           disabled={buttonsDisabled}
-          secondary
+          color='secondary'
           onClick={() => decrypt(phrase, secret)}
         >
           Decrypt!
         </Button>
+        <ShareButton color='success' phrase={text}>
+          Share
+        </ShareButton>
       </div>
       {text ? <Snippet text={text} /> : null}
     </section>
