@@ -5,14 +5,11 @@ import styles from './Button.module.css'
 export function Button ({
   onClick,
   children,
-  secondary = false,
+  color = 'primary',
   type = 'button',
   disabled = false
 }) {
-  const classNames = filterClassNames({
-    [styles.Button]: true,
-    [styles['is-secondary']]: secondary
-  })
+  const classNames = filterClassNames([styles.Button, styles[`is-${color}`]])
 
   return (
     <button
