@@ -1,6 +1,6 @@
 {
   "name": "denkrypt",
-  "version": "1.4.0-beta0",
+  "version": "1.4.0-beta1",
   "license": "MIT",
   "scripts": {
     "start": "wmr",
