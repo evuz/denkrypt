@@ -7,9 +7,14 @@ export function Button ({
   children,
   color = 'primary',
   type = 'button',
-  disabled = false
+  disabled = false,
+  icon = false
 }) {
-  const classNames = filterClassNames([styles.Button, styles[`is-${color}`]])
+  const classNames = filterClassNames({
+    [styles.Button]: true,
+    [styles[`is-${color}`]]: true,
+    [styles['is-icon']]: icon
+  })
 
   return (
     <button
