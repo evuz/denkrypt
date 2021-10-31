@@ -1,5 +1,3 @@
-import { useState } from 'preact/hooks'
-
 import { Input } from '../../components/Input/Input'
 import { Button } from '../../components/Button/Button'
 import { Progress } from '../../components/Progress/Progress'
@@ -19,19 +17,16 @@ function getPasswordProgress (pass) {
 const PASSPHRASE = 'Denkrypt passphrase'
 
 export function PasswordContainer ({ value = '', onChange }) {
-  const { sign, isAvailable: metamaskAvailable } = useMetamask()
-  const [isMetamask, setIsMetamask] = useState(false)
+  const metamask = useMetamask()
 
-  const progress = getPasswordProgress(value)
-
-  const handleMetamaskConnect = async () => {
-    const metamaskPass = await sign(PASSPHRASE)
-    onChange(metamaskPass)
-    setIsMetamask(true)
+  if (metamask.isConnected) {
+    return null
   }
 
-  if (isMetamask) {
-    return null
+  const progress = getPasswordProgress(value)
+  async function handleMetamaskConnect () {
+    const metamaskPass = await metamask.sign(PASSPHRASE)
+    onChange(metamaskPass)
   }
 
   return (
@@ -44,8 +39,13 @@ export function PasswordContainer ({ value = '', onChange }) {
           onChange={onChange}
           type='password'
         />
-        {metamaskAvailable && (
-          <Button icon color='primary' onClick={handleMetamaskConnect}>
+        {metamask.isAvailable && (
+          <Button
+            icon
+            color='primary'
+            disabled={metamask.isLoading}
+            onClick={handleMetamaskConnect}
+          >
             <MetamaskIcon />
           </Button>
         )}
