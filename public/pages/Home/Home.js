@@ -1,33 +1,25 @@
-import { useState, useEffect } from 'preact/hooks'
+import { useState } from 'preact/hooks'
 
 import styles from './Home.module.css'
 
 import { Button } from '../../components/Button/Button'
 import { Header } from '../../components/Header/Header'
 import { Input } from '../../components/Input/Input'
-import { Progress } from '../../components/Progress/Progress'
 import { Snippet } from '../../components/Snippet/Snippet'
 import { useEncode } from '../../hooks/useEncode'
 
-import { passwordScore } from '../../utils/passwordScore'
 import { useSearchParam } from '../../hooks/useSearchParam'
 import { ShareButton } from '../../components/ShareButton'
+
+import { PasswordContainer } from '../../containers/Password/Password'
 
 export function Home () {
   const params = useSearchParam()
   const [phrase, setPhrase] = useState(params.phrase || '')
   const [secret, setSecret] = useState('')
-  const [progress, setProgress] = useState({ percent: 0 })
   const { text, encrypt, decrypt } = useEncode()
 
-  useEffect(() => {
-    const score = passwordScore(secret)
-    const scorePercent = (100 / 6) * score
-    setProgress({ percent: scorePercent })
-  }, [secret])
-
   const buttonsDisabled = [secret.length, phrase.length].includes(0)
-
   return (
     <section className={styles.container}>
       <Header />
@@ -39,21 +31,7 @@ export function Home () {
         placeholder='Insert text'
         onChange={setPhrase}
       />
-      <div className={styles.secret}>
-        <Input
-          name='secret'
-          placeholder='Secret key'
-          value={secret}
-          onChange={setSecret}
-          type='password'
-        />
-        <Progress
-          placeholder='Secret key'
-          percent={progress.percent}
-          onChange={() => {}}
-          type='password'
-        />
-      </div>
+      <PasswordContainer value={secret} onChange={setSecret} />
       <div className={styles.buttons}>
         <Button
           disabled={buttonsDisabled}
